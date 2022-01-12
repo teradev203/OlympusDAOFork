@@ -163,11 +163,11 @@ function Home() {
     <div className="headBox">
       <img src={Logoimg} alt="" className="logo" />
       <ul className="uls">
-        <li className="lis"><a className="a" href="https://pidao.gitbook.io/homepage/whitepapers/pidao-pro">PIDAO Pro</a></li>
+        <li className="lis"><a className="a" href="https://crypstarter.network/">Home</a></li>
         <li className="lis"><a className="a" href="/stake">Stake</a></li>
         <li className="lis"><a className="a" href="/bonds">Bond</a></li>
-        <li className="lis"><a className="a" href="https://pidao.gitbook.io/homepage/pidao-finance/faqs">FAQs</a></li>
-        <li className="lis"><a className="a" href="https://pidao.gitbook.io/homepage/community/governance">Get Involved</a></li>
+        <li className="lis"><a className="a" href="">FAQs</a></li>
+        <li className="lis"><a className="a" href="">Get Involved</a></li>
       </ul>
       <div>
       <Button
@@ -220,11 +220,11 @@ function Home() {
       
       </div> */}
       <div className="contentStyle">
-        PIDAO is a decentralized reserve currency protocol based on the PID token and aims at building a community-owned decentralized financial infrastructure for the crypto world.
+        CryptStarter DAO is a decentralized reserve currency protocol based on the PID token and aims at building a community-owned decentralized financial infrastructure for the crypto world.
       </div>
       <div className="fxBetween">
         <a href="/stake" className="btnBox_1">Enter App</a>
-        <a href="https://pidao.gitbook.io/homepage/" className="btnBox_2 a" target="_blank">Documentation</a>
+        <a href="https://crypstarter.network/" className="btnBox_2 a" target="_blank">Documentation</a>
       </div>
       <div className="fxBetween2 mgTop">
         <div className="fxColumn2">
@@ -249,21 +249,21 @@ function Home() {
     </div>
     {/* 底部链接栏 */}
     <div className="bottomBor a">
-      <a href="https://twitter.com/PIDAOFinance" target="_blank" className="bottomImgs a2"><img src={img1_1} alt="" className="bottomImgs2" /></a>
-      <a href="https://github.com/PIDAOFinance" target="_blank" className="bottomImgs a2"><img src={img1_2} alt="" className="bottomImgs2" /></a>
-      <a href="https://discord.com/invite/hPRwxePEYV" target="_blank" className="bottomImgs a2"><img src={medium} alt="" className="bottomImgs2" /></a>
-      <a href="https://t.me/PIDAOfinance" target="_blank" className="bottomImgs a"><img src={img1_4} alt="" className="bottomImgs2" /></a>
+      <a href="" target="_blank" className="bottomImgs a2"><img src={img1_1} alt="" className="bottomImgs2" /></a>
+      <a href="" target="_blank" className="bottomImgs a2"><img src={img1_2} alt="" className="bottomImgs2" /></a>
+      <a href="" target="_blank" className="bottomImgs a2"><img src={medium} alt="" className="bottomImgs2" /></a>
+      <a href="" target="_blank" className="bottomImgs a"><img src={img1_4} alt="" className="bottomImgs2" /></a>
       {/* <a href="https://discord.com/invite/hPRwxePEYV" target="_blank" className="bottomImgs a"><img src={DiscordImg} alt="" className="bottomImgs2" /></a> */}
     </div>
     {menu ?
       <div className="moban" onClick={() => ShowhideClick()} >
         <div className="CaiDanlieBiao">
           <img src={Logoimg} alt="" className="logo2" />
-          <div className="lis2"><a target="_blank" className="a" href="https://pidao.gitbook.io/homepage/whitepapers/pidao-pro">PIDAO Pro</a></div>
+          <div className="lis2"><a target="_blank" className="a" href="">PIDAO Pro</a></div>
           <div className="lis2"><a className="a" href="/stake">Stake</a></div>
           <div className="lis2"><a className="a" href="/bonds">Bond</a></div>
-          <div className="lis2"><a target="_blank" className="a" href="https://pidao.gitbook.io/homepage/pidao-finance/faqs">FAQs</a></div>
-          <div className="lis2"><a target="_blank" className="a" href="https://pidao.gitbook.io/homepage/community/governance">Get Involved</a></div>
+          <div className="lis2"><a target="_blank" className="a" href="">FAQs</a></div>
+          <div className="lis2"><a target="_blank" className="a" href="">Get Involved</a></div>
           {/* <a href="https://github.com/peckshield/publications/blob/master/audit_reports/PeckShield-Audit-Report-OlympusDAO-v1.0.pdf" target="_blank" ><img src={ShenJiImg1} alt="" className="shenji2" /></a>
           <a href="https://omniscia.io/olympusdao-algorithmic-currency-protocol/" target="_blank"><img src={ShenJiImg2} alt="" className="shenji3" /></a> */}
         </div>

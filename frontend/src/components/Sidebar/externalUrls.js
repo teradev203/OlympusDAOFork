@@ -13,17 +13,17 @@ const externalUrls = [
   // },
   {
     title: "Governance",
-    url: "https://pidao.gitbook.io/homepage/community/governance",
+    url: "",
     icon: <SvgIcon color="primary" component={GovIcon} />,
   },
   {
     title: "Docs",
-    url: "https://pidao.gitbook.io/homepage/",
+    url: "",
     icon: <SvgIcon color="primary" component={DocsIcon} />,
   },
   {
     title: "Feedback",
-    url: "https://docs.google.com/forms/d/e/1FAIpQLScnaNowC-y5Yj9QET3j67aqpKN6FWFAit973ICQzAsERaVw0w/viewform",
+    url: "",
     icon: <SvgIcon color="primary" component={FeedbackIcon} />,
   }
 ];

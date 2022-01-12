@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { Paper, Tab, Tabs, Box } from "@material-ui/core";
+import { Paper, Tab, Tabs, Box, Grid } from "@material-ui/core";
 import InfoTooltipMulti from "../../components/InfoTooltip/InfoTooltipMulti";
 
 import TabPanel from "../../components/TabPanel";
@@ -18,7 +18,8 @@ import { poolDataQuery, yourAwardsQuery } from "./poolData.js";
 import { calculateOdds } from "../../helpers/33Together";
 import { getPoolValues, getRNGStatus } from "../../slices/PoolThunk";
 import { trim } from "../../helpers/index";
-
+import { Typography, Button, Zoom } from "@material-ui/core";
+import { Skeleton } from "@material-ui/lab";
 function a11yProps(index) {
   return {
     id: `pool-tab-${index}`,
@@ -26,7 +27,7 @@ function a11yProps(index) {
   };
 }
 
-const PoolTogether = () => {
+const Presale = () => {
   const [view, setView] = useState(0);
 
   const changeView = (event, newView) => {
@@ -140,44 +141,114 @@ const PoolTogether = () => {
   }, [walletChecked]);
 
   return (
-    <div id="pool-together-view">
-      <PoolPrize />
+    <Zoom in={true}>
+      <div id="pool-together-view">
+        <Paper className="ohm-card">
+          <Box display="flex">
+            <CardHeader title="Presale" />
+          </Box>
+          <Grid container direction="column" spacing={2}>
+            <Grid item>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                  <Typography variant="h5">
+                    <Skeleton type="text" />
+                  </Typography>
+                  <Typography variant="h6" color="textSecondary" align="center">
+                    Claimable Rewards
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+              </Grid>
+            </Grid>
+            <Grid item>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                  <Button
+                    className="stake-button"
+                    variant="contained"
+                    color="primary"
+                  >
+                    Claim PID
+                  </Button>
+                </Grid>
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+              </Grid>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                  <Button
+                    className="stake-button"
+                    variant="contained"
+                    color="primary"
+                  >
+                    Claim And Stake
+                  </Button>
+                </Grid>
+                <Grid item xs={12} sm={4} md={4} lg={4} />
+              </Grid>
+            </Grid>
+            <Grid item>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={10} md={10} lg={10} >
+                  <Typography variant="h7">Pending Rewards</Typography>
+                </Grid>
+                <Grid item xs={12} sm={2} md={2} lg={2} >
+                  <Typography variant="h7">
+                    <Skeleton type="text" />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={10} md={10} lg={10} >
+                  <Typography variant="h7">Claimable Rewards</Typography>
+                </Grid>
+                <Grid item xs={12} sm={2} md={2} lg={2} >
+                  <Typography variant="h7">
+                    <Skeleton type="text" />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container spacing={2} alignItems="flex-end">
+                <Grid item xs={12} sm={10} md={10} lg={10} >
+                  <Typography variant="h7">Time until fully vested</Typography>
+                </Grid>
+                <Grid item xs={12} sm={2} md={2} lg={2} >
+                  <Typography variant="h7">
+                    <Skeleton type="text" />
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
 
-      <Paper className="ohm-card">
-        <Box display="flex">
-          <CardHeader title="3,3 π" />
-          <InfoTooltipMulti messagesArray={infoTooltipMessage} />
-        </Box>
-        <Tabs
-          centered
-          value={view}
-          textColor="primary"
-          indicatorColor="primary"
-          onChange={changeView}
-          className="pt-tabs"
-          aria-label="pool tabs"
-        >
-          <Tab label="Deposit" {...a11yProps(0)} />
-          <Tab label="Withdraw" {...a11yProps(1)} />
-        </Tabs>
-
-        <TabPanel value={view} index={0} className="pool-tab">
-          <PoolDeposit
-            totalPoolDeposits={totalDeposits}
-            winners={winners}
-            setInfoTooltipMessage={setInfoTooltipMessage}
-          />
-        </TabPanel>
-        <TabPanel value={view} index={1} className="pool-tab">
-          <PoolWithdraw
-            totalPoolDeposits={totalDeposits}
-            winners={winners}
-            setInfoTooltipMessage={setInfoTooltipMessage}
-          />
-        </TabPanel>
-      </Paper>
-
-      {/* <PoolInfo
+          </Grid>
+        </Paper>
+        <Paper className="ohm-card">
+          <Box display="flex">
+            <CardHeader title="About Presale" />
+          </Box>
+          <Typography variant="h6">
+            ● Only whitelisted users can join the pre-sale
+          </Typography>
+          <Typography variant="h6">
+            ● Pre-sale Date: 27th Dec 2021 from 08:00:00 UTC to 23:59:00 UTC
+          </Typography>
+          <Typography variant="h6">
+            ● Token: $POWER
+          </Typography>
+          <Typography variant="h6">
+            ● Price per token: 10 BUSD per $POWER
+          </Typography>
+          <Typography variant="h6">
+            ● Each whitelisted address can buy a maximum of 1000 BUSD
+          </Typography>
+          <Typography variant="h6">
+            ● Vesting Period: Linearly release over 14 days from launching date
+          </Typography>
+        </Paper>
+        {/* <PoolInfo
         graphLoading={graphLoading}
         isAccountLoading={isAccountLoading}
         poolBalance={trim(poolBalance, 4)}
@@ -188,8 +259,9 @@ const PoolTogether = () => {
         totalDeposits={totalDeposits}
         totalSponsorship={totalSponsorship}
       /> */}
-    </div>
+      </div >
+    </Zoom>
   );
 };
 
-export default PoolTogether;
+export default Presale;

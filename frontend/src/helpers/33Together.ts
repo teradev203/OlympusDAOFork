@@ -9,7 +9,7 @@ import { abi as SOhmAbi } from "../abi/sOHM.json";
  * @param {*} usersPoolBalance the user's total balance of pool tokens
  * @param {*} totalPoolDeposits the pool's total balance of deposits. Does not include totalSponsorship deposits since those can't win
  * @param {*} winners the pool's winners quantity per award period
- * PoolTogether's implementation: https://github.com/pooltogether/pooltogether-community-ui/blob/2d4749e2e64c4f2ae259ac073edc0a49ca5857e2/lib/utils/calculateOdds.js#L3
+ * Presale's implementation: https://github.com/pooltogether/pooltogether-community-ui/blob/2d4749e2e64c4f2ae259ac073edc0a49ca5857e2/lib/utils/calculateOdds.js#L3
  */
 export const calculateOdds = (usersPoolBalance: string, totalPoolDeposits: number, winners: number) => {
   let userOdds;
@@ -26,7 +26,7 @@ export const calculateOdds = (usersPoolBalance: string, totalPoolDeposits: numbe
  * @param {*} ticketCreditRateMantissa from the contract
  * @param {*} ticketCreditLimitMantissa from the contract
  * @returns {Array} [creditMaturationInDays === ExitFeeDecayTime (in days), creditLimitPercentage === ExitFee as %]
- * PoolTogether's implementation: https://github.com/pooltogether/pooltogether-community-ui/blob/93884caf76eb91ec700c4a74c3fc40ecf65c1d47/lib/utils/format.js#L50
+ * Presale's implementation: https://github.com/pooltogether/pooltogether-community-ui/blob/93884caf76eb91ec700c4a74c3fc40ecf65c1d47/lib/utils/format.js#L50
  */
 export const getCreditMaturationDaysAndLimitPercentage = (
   ticketCreditRateMantissa: BigNumber,

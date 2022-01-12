@@ -48,7 +48,7 @@ function NavContent() {
     if (currentPath.indexOf("stake") >= 0 && page === "stake") {
       return true;
     }
-    if (currentPath.indexOf("33-together") >= 0 && page === "33-together") {
+    if (currentPath.indexOf("Presale") >= 0 && page === "Presale") {
       return true;
     }
     if (currentPath.indexOf("nft") >= 0 && page === "nft") {
@@ -68,7 +68,7 @@ function NavContent() {
       <Box className="dapp-sidebar-inner" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://pidao.finance" target="_blank">
+            <Link href="https://crypstarter.network/" target="_blank">
               {/* <SvgIcon
                 color="primary"
                 component={OlympusIcon}
@@ -124,20 +124,20 @@ function NavContent() {
 
               <ANavLink
                 component={NavLink}
-                id="33-together-nav"
-                to="/33-together"
+                id="Presale-nav"
+                to="/Presale"
                 isActive={(match, location) => {
-                  return checkPage(match, location, "33-together");
+                  return checkPage(match, location, "Presale");
                 }}
                 className={`button-dapp-menu ${isActive ? "active" : ""}`}
                 bg2={Togetherimg2}
               >
                 <Typography variant="h6">
                   <ANavIcon bg1={Togetherimg} />
-                  3,3 π
+                  Presale
                 </Typography>
               </ANavLink>
-              <ANavLink
+              {/* <ANavLink
                 component={NavLink}
                 id="nft"
                 to="/nft"
@@ -151,7 +151,7 @@ function NavContent() {
                   <ANavIcon bg1={NFTimg} />
                   PINFT
                 </Typography>
-              </ANavLink>
+              </ANavLink> */}
               <ANavLink
                 component={NavLink}
                 id="bond-nav"

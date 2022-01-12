@@ -1,11 +1,13 @@
 /* eslint-disable global-require */
 import { Component } from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { Web3ContextProvider } from "./hooks/web3Context";
-
+import { createBrowserHistory } from 'history'
 import App from "./App";
 import store from "./store";
+
+const history = createBrowserHistory()
 
 export default class Root extends Component {
   constructor(props) {
@@ -16,9 +18,9 @@ export default class Root extends Component {
     return (
       <Web3ContextProvider>
         <Provider store={store}>
-          <BrowserRouter basename={"/#"}>
+          <Router history={history}>
             <App />
-          </BrowserRouter>
+          </Router>
         </Provider>
       </Web3ContextProvider>
     );

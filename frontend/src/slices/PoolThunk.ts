@@ -160,7 +160,7 @@ export const getEarlyExitFee = createAsyncThunk(
     //
     // `callStatic` would be equivalent to `call` in web3js: https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#methods-mymethod-call
     //
-    // PoolTogether actually uses a custom implementation of a MultiCall using web3js to batch two calls together:
+    // Presale actually uses a custom implementation of a MultiCall using web3js to batch two calls together:
     // https://github.com/pooltogether/etherplex/blob/9cf1b94e8879c08c7951d1308c14712aaaa5cec7/src/MulticallContract.ts#L33
     //
     const earlyExitFee = await poolReader.callStatic.calculateEarlyExitFee(

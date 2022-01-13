@@ -20,7 +20,6 @@ export async function getMarketPrice({ networkID, provider }: IBaseAsyncThunk) {
   const reserves = await pairContract.getReserves();
 
   
-  console.error(reserves[0].toString())
   const reserves0 = getDisplayBalance(reserves[1],18)
   const reserves1 = getDisplayBalance(reserves[0],9,2)
 
@@ -70,10 +69,6 @@ export function getRebaseBlock(currentBlock: number) {
 
 export function secondsUntilBlock(startBlock: number, endBlock: number) {
   const blocksAway = endBlock - startBlock;
-  console.error({
-    endBlock,
-    startBlock
-  })
   const secondsAway = blocksAway * BLOCK_RATE_SECONDS;
 
   return secondsAway;
@@ -83,6 +78,7 @@ export function prettyVestingPeriod(currentBlock: number, vestingBlock: number) 
   if (vestingBlock === 0) {
     return "";
   }
+  console.log('prettyVestingPeriod', vestingBlock);
 
   const seconds = secondsUntilBlock(currentBlock, vestingBlock);
   if (seconds < 0) {

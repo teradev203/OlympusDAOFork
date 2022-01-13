@@ -37,8 +37,8 @@ export const dai = new StableBond({
       reserveAddress: addresses[NetworkID.Mainnet].DAI_ADDRESS,
     },
     [NetworkID.Testnet]: {
-      bondAddress: "0xDea5668E815dAF058e3ecB30F645b04ad26374Cf",
-      reserveAddress: "0xB2180448f8945C8Cc8AE9809E67D6bd27d8B2f2C",
+      bondAddress: "0xB29dD6217cFb8C4233c5a7C4422b6F258bcD59dC", // 0xDea5668E815dAF058e3ecB30F645b04ad26374Cf
+      reserveAddress: "0xF95BD116A3A3E0053b0B757892450E5FCD55CaBF", // 0xB2180448f8945C8Cc8AE9809E67D6bd27d8B2f2C
     },
   },
 });
@@ -83,8 +83,8 @@ export const ohm_dai = new LPBond({
       reserveAddress: "0x3991e0988A69E4C8Fde46C011Dafe55E26fdD18D",
     },
     [NetworkID.Testnet]: {
-      bondAddress: "0xcF449dA417cC36009a1C6FbA78918c31594B9377",
-      reserveAddress: "0x8D5a22Fb6A1840da602E56D1a260E56770e0bCE2",
+      bondAddress: "0xB2827d9ed19eC1DcfFE55Ce58F81FCD9B2b6897B", // 0xcF449dA417cC36009a1C6FbA78918c31594B9377
+      reserveAddress: "0x1F3e1398655A58465703983E98478Da17ee5cec1", // 0x8D5a22Fb6A1840da602E56D1a260E56770e0bCE2
     },
   },
   lpUrl:

@@ -17,6 +17,7 @@ dest_dir="01.LISA_Deep_Learning_Tutorial_Data"
 # 2.Download mini_librispeech dataset(language model and acoustic model)
 
 dest_dir="02.mini_librispeech_language_model"
+wget  --directory-prefix="02.mini_librispeech_language_model" http://www.openslr.org/resources/11/3-gram.arpa.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/11/3-gram.arpa.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/11/3-gram.pruned.1e-7.arpa.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/11/3-gram.pruned.3e-7.arpa.gz
@@ -24,8 +25,8 @@ wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/11/librisp
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/11/librispeech-lexicon.txt
 
 dest_dir="02.mini_librispeech_acoustic_model"
-wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/31/dev-clean-2.tar.gz
-wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/31/test-clean-5.tar.gz
+wget  --directory-prefix="02.mini_librispeech_acoustic_model" http://www.openslr.org/resources/31/dev-clean-2.tar.gz
+wget  --directory-prefix="02.mini_librispeech_acoustic_model" http://www.openslr.org/resources/31/test-clean-5.tar.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/31/dev-other.tar.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/31/test-other.tar.gz
 wget  --directory-prefix="$dest_dir" http://www.openslr.org/resources/31/train-clean-100.tar.gz

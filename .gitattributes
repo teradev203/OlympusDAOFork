@@ -1,0 +1,5 @@
+srilm.tar.gz filter=lfs diff=lfs merge=lfs -text
+mnist.pkl.gz filter=lfs diff=lfs merge=lfs -text
+*.arpa.gz filter=lfs diff=lfs merge=lfs -text
+*.arpa.gz1 filter=lfs diff=lfs merge=lfs -text
+02.mini_librispeech_acoustic_model/dev-clean-2.tar.gz filter=lfs diff=lfs merge=lfs -text
